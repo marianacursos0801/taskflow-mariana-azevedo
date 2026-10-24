@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#ffa6aa", "on-error-container": "#93000a", "on-surface": "#1a1c1f", "on-background": "#1a1c1f", "on-secondary": "#ffffff", "inverse-on-surface": "#f0f0f5", "primary": "#740010", "secondary": "#745b00", "secondary-fixed": "#ffe08b", "on-error": "#ffffff", "surface-tint": "#b4262d", "surface-dim": "#d9dadf", "on-surface-variant": "#5a403f", "on-primary-fixed": "#410005", "primary-fixed": "#ffdad7", "surface-container-low": "#f3f3f8", "on-tertiary-fixed-variant": "#8e0f28", "secondary-container": "#fcd358", "surface": "#f9f9fe", "outline": "#8e706e", "surface-bright": "#f9f9fe", "inverse-primary": "#ffb3af", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#584400", "on-primary": "#ffffff", "inverse-surface": "#2e3034", "tertiary-fixed": "#ffdada", "tertiary": "#73001c", "on-tertiary": "#ffffff", "on-secondary-container": "#735a00", "surface-container-highest": "#e2e2e7", "secondary-fixed-dim": "#eac249", "tertiary-container": "#97182e", "surface-container-high": "#e8e8ed", "error": "#ba1a1a", "surface-container": "#ededf3", "on-primary-container": "#ffa8a3", "surface-variant": "#e2e2e7", "primary-container": "#9b111e", "on-secondary-fixed": "#241a00", "primary-fixed-dim": "#ffb3af", "tertiary-fixed-dim": "#ffb3b5", "outline-variant": "#e2bebc", "background": "#f9f9fe", "on-primary-fixed-variant": "#910618", "on-tertiary-fixed": "#40000b", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin": "1rem", "margin-lg": "3rem", "gutter-lg": "2rem", "gutter": "1rem", "gutter-md": "1.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-md": "1rem", "space-xl": "2rem", "margin-md": "2rem" }, "fontFamily": { "headline-lg": ["Inter"], "headline-md": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "headline-xl": ["Inter"], "headline-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "headline-xl-mobile": ["Inter"], "label-lg": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Voltar" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="M&amp;J Tur Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X63DqvME5sVtE-JAwkVY9ryVSMhtU16rll0XGgBRF9ECwYO1bbSQ8wR48koRMoJV64TflAwrmnJCASWSbH4HDGjsQV6Iv643Puf52M_Rx5BpO02nGG1gwgvDjWQkuq2aVgq72av_f-j_C-zeQsdnd5e_J_Pa5aWSSD1cz6prhU5jufmtjlpPqv7b3ftbYhTUbigSF7-n_EGK-eGLsWEpPcrL8LBIqwHhpbKMzRH97HOqmqJK9dXg-hdTIC"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate ml-space-xs">Check In Motorista</h1></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-safe">
+<div class="px-gutter pt-space-md space-y-space-md">
+<!-- Driver Header & Identity Card -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-secondary-fixed/30 pointer-events-none blur-xl"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Close up professional portrait of a Brazilian male bus driver in smart dark executive uniform with a warm, confident smile, crisp professional transport setting, corporate ruby and warm golden tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOock1zcB3Qrvn0QsedpNHgzfNz4hfWUsW3opqc4LplzxdrCTQKqbEX02XqsaR4vnPEhmKzpIlupNaZ7GouMYR1s-Q5wkmtCgu6gyjTo9WqXEjK98cCYAqN2AC_F54LISQUgBXsv-Dh9eXaHw7yWfpLLYOQwMV1B8sdAj4DheTstA7FyVHqDFJlE4URUMOwBm3pQaBv5QKRRyCXvQO5DOsaPkGeDFozHuk4U48n3-X_h-3cuSTJBzSuQ"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-primary flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-surface-container-lowest"></span>
+</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Painel Operacional</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Roberto Lima</h2>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 bg-secondary-fixed/50 text-on-secondary-fixed-variant px-space-sm py-1 rounded-full font-label-md text-label-md shrink-0">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+          Em Operação
+        </span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[18px]">directions_bus</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Van Executiva 04 • Rota Campi Norte</span>
+</div>
+</section>
+<!-- Trip Switcher & Operational Metrics -->
+<section class="space-y-space-sm">
+<!-- Selector Pill Container -->
+<div class="bg-surface-container-high p-1 rounded-xl flex gap-1">
+<button class="flex-1 py-space-xs px-space-sm rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-all bg-primary text-on-primary shadow-sm" id="tab-ida" onclick="switchTrip('ida')">
+<span class="material-symbols-outlined text-[16px]">wb_twilight</span>
+<span>Ida Noturno • 18:30</span>
+</button>
+<button class="flex-1 py-space-xs px-space-sm rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-all text-on-surface-variant hover:text-on-surface" id="tab-volta" onclick="switchTrip('volta')">
+<span class="material-symbols-outlined text-[16px]">nights_stay</span>
+<span>Volta • 22:45</span>
+</button>
+</div>
+<!-- Quick Metrics Ribbon -->
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm text-center flex flex-col justify-center">
+<span class="font-headline-md text-headline-md text-primary">18</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Confirmados</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm text-center flex flex-col justify-center">
+<span class="font-headline-md text-headline-md text-outline">02</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cancelados</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm text-center flex flex-col justify-center">
+<div class="flex items-center justify-center gap-0.5 text-secondary">
+<span class="font-headline-md text-headline-md">20</span>
+<span class="font-label-sm text-label-sm">lug.</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Capacidade</span>
+</div>
+</div>
+</section>
+<!-- Stops Timeline (Documented Logistics Order) -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-2 h-5 bg-primary rounded-full"></div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Sequência de Paradas</h3>
+</div>
+<span class="font-label-md text-label-md text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">alt_route</span>
+          4 Pontos
+        </span>
+</div>
+<div class="relative pl-6 space-y-space-lg">
+<!-- Connecting Vertical Rail -->
+<div class="absolute left-2.5 top-3 bottom-4 w-0.5 bg-surface-container-highest"></div>
+<!-- Stop 1 -->
+<div class="relative flex items-start gap-space-sm">
+<span class="absolute -left-[1.85rem] top-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-on-primary text-[13px]">check</span>
+</span>
+<div class="flex-1 bg-surface-container-low p-space-sm rounded-lg flex items-start justify-between gap-space-xs">
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-bold">18:00 • Parada 1 (Concluída)</span>
+<p class="font-label-lg text-label-lg text-on-surface truncate">Ponto Central - Praça da Sé</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Embarque de 4 alunos</p>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-2 py-0.5 rounded text-[11px] font-semibold shrink-0">4 Emb.</span>
+</div>
+</div>
+<!-- Stop 2 -->
+<div class="relative flex items-start gap-space-sm">
+<span class="absolute -left-[1.85rem] top-1 w-5 h-5 rounded-full bg-secondary-container flex items-center justify-center ring-4 ring-secondary-fixed/30 shadow-sm animate-pulse">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</span>
+<div class="flex-1 bg-secondary-fixed/20 p-space-sm rounded-lg flex items-start justify-between gap-space-xs">
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary font-bold">18:15 • Parada Atual</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface truncate">Av. Brasil, 1200</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate">Lucas Silveira e Beatriz Santos</p>
+</div>
+<span class="bg-primary text-on-primary px-2 py-0.5 rounded text-[11px] font-semibold shrink-0">2 Alunos</span>
+</div>
+</div>
+<!-- Stop 3 -->
+<div class="relative flex items-start gap-space-sm">
+<span class="absolute -left-[1.85rem] top-1 w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+</span>
+<div class="flex-1 bg-surface-container-low p-space-sm rounded-lg flex items-start justify-between gap-space-xs opacity-90">
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">18:25 • Próxima</span>
+<p class="font-label-lg text-label-lg text-on-surface truncate">Rua das Palmeiras, 85</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate">Mariana Costa</p>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded text-[11px] font-semibold shrink-0">1 Aluno</span>
+</div>
+</div>
+<!-- Stop 4 -->
+<div class="relative flex items-start gap-space-sm">
+<span class="absolute -left-[1.85rem] top-1 w-5 h-5 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[12px]">school</span>
+</span>
+<div class="flex-1 bg-surface-container-low p-space-sm rounded-lg flex items-start justify-between gap-space-xs opacity-90">
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">18:50 • Destino Final</span>
+<p class="font-label-lg text-label-lg text-on-surface truncate">Campus Central Universitário</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Desembarque Geral da Turma</p>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-2 py-0.5 rounded text-[11px] font-semibold shrink-0">Fim</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Passengers Manifest & Quick Check-in -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-2 h-5 bg-secondary rounded-full"></div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Lista de Passageiros</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="checkin-counter">4 de 18 embarcados</span>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">search</span>
+<input class="bg-transparent text-[12px] text-on-surface focus:outline-none w-16" oninput="filterPassengers(this.value)" placeholder="Filtrar..." type="text"/>
+</div>
+</div>
+<!-- Student Cards Manifest -->
+<div class="space-y-space-sm" id="passengers-list">
+<!-- Passenger 1 -->
+<div class="passenger-card p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs transition-colors" data-name="lucas silveira">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-on-secondary-fixed-variant font-bold text-label-md shrink-0">
+                LS
+              </div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">Lucas Silveira</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Av. Brasil, 1200</p>
+</div>
+</div>
+<a aria-label="Ligar para Lucas" class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center shadow-xs shrink-0" href="tel:5511999990001">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="status-badge font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed/30 text-on-secondary-fixed-variant">Aguardando no Ponto</span>
+<button class="checkin-btn flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-surface-container-highest text-on-surface-variant font-label-md text-label-md transition-all active:scale-95" onclick="toggleCheckin(this)">
+<span class="material-symbols-outlined text-[16px] icon-check">radio_button_unchecked</span>
+<span class="label-text">Fazer Check-in</span>
+</button>
+</div>
+</div>
+<!-- Passenger 2 -->
+<div class="passenger-card p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs transition-colors" data-name="beatriz santos">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-on-secondary-fixed-variant font-bold text-label-md shrink-0">
+                BS
+              </div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">Beatriz Santos</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Av. Brasil, 1200</p>
+</div>
+</div>
+<a aria-label="Ligar para Beatriz" class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center shadow-xs shrink-0" href="tel:5511999990002">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="status-badge font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed/30 text-on-secondary-fixed-variant">Aguardando no Ponto</span>
+<button class="checkin-btn flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-surface-container-highest text-on-surface-variant font-label-md text-label-md transition-all active:scale-95" onclick="toggleCheckin(this)">
+<span class="material-symbols-outlined text-[16px] icon-check">radio_button_unchecked</span>
+<span class="label-text">Fazer Check-in</span>
+</button>
+</div>
+</div>
+<!-- Passenger 3 -->
+<div class="passenger-card p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs transition-colors" data-name="mariana costa">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-on-secondary-fixed-variant font-bold text-label-md shrink-0">
+                MC
+              </div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">Mariana Costa</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Rua das Palmeiras, 85</p>
+</div>
+</div>
+<a aria-label="Ligar para Mariana" class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center shadow-xs shrink-0" href="tel:5511999990003">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="status-badge font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant">Próxima Parada</span>
+<button class="checkin-btn flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-surface-container-highest text-on-surface-variant font-label-md text-label-md transition-all active:scale-95" onclick="toggleCheckin(this)">
+<span class="material-symbols-outlined text-[16px] icon-check">radio_button_unchecked</span>
+<span class="label-text">Fazer Check-in</span>
+</button>
+</div>
+</div>
+<!-- Passenger 4 (Already Checked-in from Stop 1) -->
+<div class="passenger-card p-space-sm rounded-xl bg-surface-container-lowest flex flex-col gap-space-xs shadow-xs" data-name="gabriel alves">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-label-md shrink-0">
+                GA
+              </div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate line-through opacity-70">Gabriel Alves</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Praça da Sé (Embarcado 18:02)</p>
+</div>
+</div>
+<a aria-label="Ligar para Gabriel" class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center shadow-xs shrink-0" href="tel:5511999990004">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="status-badge font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-semibold">A Bordo</span>
+<button class="checkin-btn flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-primary text-on-primary font-label-md text-label-md transition-all active:scale-95" onclick="toggleCheckin(this)">
+<span class="material-symbols-outlined text-[16px] icon-check" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="label-text">Embarcado</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Operational Action Buttons -->
+<section class="space-y-space-sm pb-space-lg">
+<button class="w-full bg-primary hover:bg-tertiary text-on-primary p-space-md rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-md transition-all active:scale-98" onclick="openNoticeModal()">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+<span>Publicar Novo Aviso à Turma</span>
+</button>
+<button class="w-full bg-surface-container-lowest text-secondary p-space-md rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-sm hover:bg-surface-container-low transition-all active:scale-98" onclick="openTimeAdjustModal()">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+<span>Ajustar Horário da Rota</span>
+</button>
+</section>
+</div>
+<!-- Interactive Modal: Publicar Novo Aviso -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs flex items-end justify-center" id="notice-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl p-space-lg space-y-space-md shadow-xl animate-in slide-in-from-bottom duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">campaign</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Novo Comunicado</h4>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1" onclick="closeNoticeModal()">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Envie uma notificação instantânea no aplicativo de todos os 18 estudantes confirmados nesta rota.</p>
+<div class="space-y-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Tipo de Mensagem</label>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="notice-quick-btn p-2 rounded-lg bg-secondary-fixed/30 text-on-secondary-fixed-variant text-[12px] font-semibold text-left" type="button">Trânsito Intenso (+10 min)</button>
+<button class="notice-quick-btn p-2 rounded-lg bg-surface-container-high text-on-surface-variant text-[12px] text-left" type="button">Mudança de Trajeto</button>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Mensagem do Motorista</label>
+<textarea class="w-full bg-surface-container-low p-space-sm rounded-lg text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest" id="notice-text" placeholder="Ex: Pessoal, estamos saindo da Sé agora, previsão pontual nas próximas paradas..." rows="3"></textarea>
+</div>
+<div class="flex gap-space-xs pt-space-xs">
+<button class="flex-1 py-space-sm rounded-lg bg-surface-container-high font-label-md text-label-md text-on-surface" onclick="closeNoticeModal()">Cancelar</button>
+<button class="flex-1 py-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm" onclick="sendNotice()">Disparar Aviso</button>
+</div>
+</div>
+</div>
+<!-- Interactive Modal: Ajustar Horário -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs flex items-end justify-center" id="time-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl p-space-lg space-y-space-md shadow-xl animate-in slide-in-from-bottom duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">schedule</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Ajustar Previsão</h4>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1" onclick="closeTimeAdjustModal()">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Recalcular tempo estimado das paradas subsequentes.</p>
+<div class="flex items-center justify-center gap-space-md py-space-sm">
+<button class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-lg active:scale-95" onclick="modifyMinutes(-5)">-5</button>
+<div class="text-center">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-primary font-bold" id="delay-display">+10 min</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Ajuste Global</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-bold text-lg active:scale-95" onclick="modifyMinutes(5)">+5</button>
+</div>
+<div class="flex gap-space-xs pt-space-xs">
+<button class="flex-1 py-space-sm rounded-lg bg-surface-container-high font-label-md text-label-md text-on-surface" onclick="closeTimeAdjustModal()">Cancelar</button>
+<button class="flex-1 py-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm" onclick="confirmTimeAdjustment()">Aplicar à Rota</button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Pill -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-space-xs rounded-full font-label-md text-label-md shadow-lg transition-all duration-300 opacity-0 pointer-events-none flex items-center gap-2" id="toast">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span id="toast-message">Operação confirmada!</span>
+</div>
+</div>
+<script>
+  let currentDelay = 10;
+  let checkedCount = 4;
+  const totalCount = 18;
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
+    toastMsg.textContent = msg;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2800);
+  }
+
+  function switchTrip(type) {
+    const tabIda = document.getElementById('tab-ida');
+    const tabVolta = document.getElementById('tab-volta');
+
+    if (type === 'ida') {
+      tabIda.className = "flex-1 py-space-xs px-space-sm rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-all bg-primary text-on-primary shadow-sm";
+      tabVolta.className = "flex-1 py-space-xs px-space-sm rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-all text-on-surface-variant hover:text-on-surface";
+      showToast('Visualizando Rota de Ida (18:30)');
+    } else {
+      tabVolta.className = "flex-1 py-space-xs px-space-sm rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-all bg-primary text-on-primary shadow-sm";
+      tabIda.className = "flex-1 py-space-xs px-space-sm rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-all text-on-surface-variant hover:text-on-surface";
+      showToast('Visualizando Rota de Volta (22:45)');
+    }
+  }
+
+  function toggleCheckin(button) {
+    const card = button.closest('.passenger-card');
+    const badge = card.querySelector('.status-badge');
+    const icon = button.querySelector('.icon-check');
+    const label = button.querySelector('.label-text');
+    const isChecked = button.classList.contains('bg-primary');
+
+    if (!isChecked) {
+      // Mark as onboard
+      button.classList.remove('bg-surface-container-highest', 'text-on-surface-variant');
+      button.classList.add('bg-primary', 'text-on-primary');
+      icon.textContent = 'check_circle';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      label.textContent = 'Embarcado';
+      
+      badge.textContent = 'A Bordo';
+      badge.className = 'status-badge font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-semibold';
+      checkedCount++;
+      showToast('Presença confirmada!');
+    } else {
+      // Revert checkin
+      button.classList.add('bg-surface-container-highest', 'text-on-surface-variant');
+      button.classList.remove('bg-primary', 'text-on-primary');
+      icon.textContent = 'radio_button_unchecked';
+      icon.style.fontVariationSettings = "";
+      label.textContent = 'Fazer Check-in';
+
+      badge.textContent = 'Aguardando no Ponto';
+      badge.className = 'status-badge font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed/30 text-on-secondary-fixed-variant';
+      checkedCount = Math.max(0, checkedCount - 1);
+      showToast('Check-in desfeito');
+    }
+    document.getElementById('checkin-counter').textContent = `${checkedCount} de ${totalCount} embarcados`;
+  }
+
+  function filterPassengers(query) {
+    const term = query.toLowerCase().trim();
+    const cards = document.querySelectorAll('.passenger-card');
+    cards.forEach(card => {
+      const name = card.getAttribute('data-name');
+      if (name.includes(term)) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function openNoticeModal() {
+    document.getElementById('notice-modal').classList.remove('hidden');
+  }
+
+  function closeNoticeModal() {
+    document.getElementById('notice-modal').classList.add('hidden');
+  }
+
+  function sendNotice() {
+    closeNoticeModal();
+    showToast('Aviso transmitido aos passageiros!');
+  }
+
+  function openTimeAdjustModal() {
+    document.getElementById('time-modal').classList.remove('hidden');
+  }
+
+  function closeTimeAdjustModal() {
+    document.getElementById('time-modal').classList.add('hidden');
+  }
+
+  function modifyMinutes(delta) {
+    currentDelay = Math.max(-15, Math.min(45, currentDelay + delta));
+    const sign = currentDelay > 0 ? '+' : '';
+    document.getElementById('delay-display').textContent = `${sign}${currentDelay} min`;
+  }
+
+  function confirmTimeAdjustment() {
+    closeTimeAdjustModal();
+    showToast(`Horários ajustados em ${currentDelay > 0 ? '+' : ''}${currentDelay} min.`);
+  }
+
+  // Pre-fill quick button on click
+  document.querySelectorAll('.notice-quick-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const textarea = document.getElementById('notice-text');
+      textarea.value = this.textContent.trim();
+    });
+  });
+</script></main></body></html>

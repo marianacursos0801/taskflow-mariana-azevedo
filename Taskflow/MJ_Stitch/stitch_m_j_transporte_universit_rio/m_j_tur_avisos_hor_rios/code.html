@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#ffa6aa", "on-error-container": "#93000a", "on-surface": "#1a1c1f", "on-background": "#1a1c1f", "on-secondary": "#ffffff", "inverse-on-surface": "#f0f0f5", "primary": "#740010", "secondary": "#745b00", "secondary-fixed": "#ffe08b", "on-error": "#ffffff", "surface-tint": "#b4262d", "surface-dim": "#d9dadf", "on-surface-variant": "#5a403f", "on-primary-fixed": "#410005", "primary-fixed": "#ffdad7", "surface-container-low": "#f3f3f8", "on-tertiary-fixed-variant": "#8e0f28", "secondary-container": "#fcd358", "surface": "#f9f9fe", "outline": "#8e706e", "surface-bright": "#f9f9fe", "inverse-primary": "#ffb3af", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#584400", "on-primary": "#ffffff", "inverse-surface": "#2e3034", "tertiary-fixed": "#ffdada", "tertiary": "#73001c", "on-tertiary": "#ffffff", "on-secondary-container": "#735a00", "surface-container-highest": "#e2e2e7", "secondary-fixed-dim": "#eac249", "tertiary-container": "#97182e", "surface-container-high": "#e8e8ed", "error": "#ba1a1a", "surface-container": "#ededf3", "on-primary-container": "#ffa8a3", "surface-variant": "#e2e2e7", "primary-container": "#9b111e", "on-secondary-fixed": "#241a00", "primary-fixed-dim": "#ffb3af", "tertiary-fixed-dim": "#ffb3b5", "outline-variant": "#e2bebc", "background": "#f9f9fe", "on-primary-fixed-variant": "#910618", "on-tertiary-fixed": "#40000b", "error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin": "1rem", "margin-lg": "3rem", "gutter-lg": "2rem", "gutter": "1rem", "gutter-md": "1.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-md": "1rem", "space-xl": "2rem", "margin-md": "2rem" }, "fontFamily": { "headline-lg": ["Inter"], "headline-md": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"], "headline-xl": ["Inter"], "headline-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "headline-xl-mobile": ["Inter"], "label-lg": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="M&amp;J Tur Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X63DqvME5sVtE-JAwkVY9ryVSMhtU16rll0XGgBRF9ECwYO1bbSQ8wR48koRMoJV64TflAwrmnJCASWSbH4HDGjsQV6Iv643Puf52M_Rx5BpO02nGG1gwgvDjWQkuq2aVgq72av_f-j_C-zeQsdnd5e_J_Pa5aWSSD1cz6prhU5jufmtjlpPqv7b3ftbYhTUbigSF7-n_EGK-eGLsWEpPcrL8LBIqwHhpbKMzRH97HOqmqJK9dXg-hdTIC"/><div class="flex flex-col"><span class="font-label-sm text-label-sm uppercase text-secondary font-bold tracking-wider">M&amp;J TUR</span><span class="font-label-md text-label-md text-on-surface font-semibold">Comunicados Avisos</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden xs:flex flex-col items-end"><span class="font-label-sm text-label-sm font-semibold text-secondary-container bg-on-secondary-container/10 px-space-xs rounded">ALUNO</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><a class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" data-path="login" href="#" title="Sair"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter py-space-md space-y-space-lg">
+<!-- Header Banner / Operational Summary -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md p-space-md">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 bg-secondary/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="space-y-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wide">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          Painel Operacional
+        </span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Gestão de Linhas &amp; Avisos</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Despacho de comunicados e sincronização de viagens acadêmicas.</p>
+</div>
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">campaign</span>
+</div>
+</div>
+<!-- Storage Badge Notification -->
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">cloud_sync</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex-1">
+        Sincronização offline ativa: <code class="font-semibold text-primary">mj_horarios</code> &amp; <code class="font-semibold text-primary">mj_avisos</code>
+</p>
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+<!-- SEÇÃO 1: PUBLICAR NOVO AVISO -->
+<section class="rounded-xl bg-surface-container-lowest shadow-md p-space-md space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed/40 text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add_comment</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Publicar Novo Aviso</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Notifique motoristas e alunos em trânsito imediato.</p>
+</div>
+</div>
+<form class="space-y-space-md" id="form-novo-aviso">
+<!-- Autor (Preenchido Automaticamente) -->
+<div class="space-y-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Autor do Comunicado</label>
+<div class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+<input class="bg-transparent border-0 outline-none w-full font-label-md text-label-md text-on-surface cursor-not-allowed" id="aviso-autor" readonly="" type="text" value="Coordenação de Logística M&amp;J"/>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container">Fixo</span>
+</div>
+</div>
+<!-- Mensagem -->
+<div class="space-y-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="aviso-mensagem">Mensagem do Aviso</label>
+<div class="relative">
+<textarea class="w-full rounded-lg bg-surface-container-low text-on-surface p-space-sm font-body-md text-body-md placeholder:text-on-surface-variant/50 focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#740010] outline-none transition-all resize-none" id="aviso-mensagem" placeholder="Ex: Linha Noturna com desvio na Av. Central devido a obras viárias..." rows="3"></textarea>
+</div>
+<div class="hidden text-error font-label-sm text-label-sm flex items-center gap-1" id="aviso-error">
+<span class="material-symbols-outlined text-[16px]">error</span>
+<span>Por favor, redija o texto do comunicado antes de publicar.</span>
+</div>
+</div>
+<!-- Prioridade -->
+<div class="space-y-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Classificação de Prioridade</label>
+<div class="grid grid-cols-2 gap-space-sm" id="prioridade-selector">
+<button class="priority-btn active flex items-center justify-center gap-space-sm py-2 px-space-md rounded-lg bg-secondary-fixed/40 text-on-secondary-fixed font-label-md text-label-md transition-all shadow-sm" data-priority="NORMAL" type="button">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>Normal</span>
+</button>
+<button class="priority-btn flex items-center justify-center gap-space-sm py-2 px-space-md rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md transition-all" data-priority="URGENTE" type="button">
+<span class="material-symbols-outlined text-[18px]">emergency</span>
+<span>Urgente</span>
+</button>
+</div>
+</div>
+<!-- Feedback de Sucesso Inline -->
+<div class="hidden p-space-sm rounded-lg bg-secondary-fixed/30 text-on-secondary-fixed flex items-center gap-space-sm" id="aviso-sucesso">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md">Aviso publicado e salvo localmente com sucesso!</span>
+</div>
+<!-- Botão Ação -->
+<button class="w-full flex items-center justify-center gap-space-sm bg-primary-container text-on-primary py-3 rounded-lg font-label-lg text-label-lg shadow-md active:scale-[0.99] transition-transform" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Publicar Aviso no Mural</span>
+</button>
+</form>
+</section>
+<!-- SEÇÃO 2: MURAL DE AVISOS ATIVOS -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Mural de Avisos Ativos</h2>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold" id="contador-avisos">0</span>
+</div>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" id="btn-limpar-todos-avisos">
+        Limpar mural
+      </button>
+</div>
+<!-- Container Dinâmico da Lista de Avisos -->
+<div class="space-y-space-sm" id="lista-avisos">
+<!-- Inserido dinamicamente via JS -->
+</div>
+<!-- Empty State -->
+<div class="hidden flex-col items-center justify-center p-space-xl bg-surface-container-lowest rounded-xl shadow-sm text-center space-y-space-xs" id="empty-state-avisos">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed/30 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">notifications_paused</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Sem comunicados ativos</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Nenhum alerta ou informe vigente cadastrado no momento.</p>
+</div>
+</section>
+<!-- SEÇÃO 3: GESTÃO DE HORÁRIOS DAS VIAGENS -->
+<section class="rounded-xl bg-surface-container-lowest shadow-md p-space-md space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Horários das Viagens</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ajuste de trajetos universitários e turnos diários.</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" id="btn-reset-horarios" title="Restaurar Padrão">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+</div>
+<!-- Feed de Viagens Editáveis -->
+<div class="space-y-space-md" id="lista-viagens">
+<!-- Itens de viagens injetados via JS -->
+</div>
+<!-- Feedback Sucesso Viagens -->
+<div class="hidden p-space-sm rounded-lg bg-secondary-fixed/30 text-on-secondary-fixed flex items-center gap-space-sm" id="horarios-sucesso">
+<span class="material-symbols-outlined text-secondary text-[20px]">task_alt</span>
+<span class="font-label-md text-label-md">Grade de horários atualizada e sincronizada com sucesso!</span>
+</div>
+<!-- Botão de Salvar Grade -->
+<button class="w-full flex items-center justify-center gap-space-sm bg-primary text-on-primary py-3 rounded-lg font-label-lg text-label-lg shadow-md active:scale-[0.99] transition-transform" id="btn-salvar-horarios" type="button">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>Salvar Alterações de Horário</span>
+</button>
+</section>
+<!-- Bottom Operational Micro-Stats -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low shadow-sm flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed/50 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">alt_route</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Linhas Ativas</p>
+<p class="font-headline-sm text-headline-sm text-on-surface">03 Rotas</p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low shadow-sm flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">airline_seat_recline_normal</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Frota Vinculada</p>
+<p class="font-headline-sm text-headline-sm text-on-surface">120 Lugares</p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const STORAGE_KEY_AVISOS = 'mj_avisos';
+    const STORAGE_KEY_HORARIOS = 'mj_horarios';
+
+    // Mock inicial de Horários
+    const defaultHorarios = [
+      {
+        id: 'LINHA-01',
+        nome: 'Linha Alfa • Noturno',
+        origem: 'Terminal Rodoviário Central',
+        saida: '18:15',
+        destino: 'Campus Universitário Sul',
+        chegada: '19:00',
+        veiculo: 'Ônibus Executivo 44'
+      },
+      {
+        id: 'LINHA-02',
+        nome: 'Linha Beta • Matutino',
+        origem: 'Praça das Bandeiras (Centro)',
+        saida: '06:40',
+        destino: 'Faculdade de Tecnologia',
+        chegada: '07:25',
+        veiculo: 'Micro-ônibus 18'
+      },
+      {
+        id: 'LINHA-03',
+        nome: 'Linha Gama • Vespertino',
+        origem: 'Estação Metroviária Norte',
+        saida: '12:30',
+        destino: 'Complexo Universitário Politécnico',
+        chegada: '13:10',
+        veiculo: 'Ônibus Rodoviário 32'
+      }
+    ];
+
+    // Mock inicial de Avisos
+    const defaultAvisos = [
+      {
+        id: 'aviso-1',
+        autor: 'Coordenação de Logística M&J',
+        mensagem: 'Caros passageiros, favor apresentar o QR Code da Carteira Digital atualizado ao embarcar.',
+        prioridade: 'NORMAL',
+        dataIso: new Date(Date.now() - 3600000 * 3).toISOString()
+      },
+      {
+        id: 'aviso-2',
+        autor: 'Coordenação de Logística M&J',
+        mensagem: 'ATENÇÃO: Bloqueio temporário no Anel Viário. Todas as linhas podem ter acréscimo de 10 min na chegada.',
+        prioridade: 'URGENTE',
+        dataIso: new Date(Date.now() - 3600000 * 1).toISOString()
+      }
+    ];
+
+    // Gerenciamento de Estado
+    let avisos = [];
+    let horarios = [];
+    let prioridadeSelecionada = 'NORMAL';
+
+    function initStorage() {
+      try {
+        const storedAvisos = localStorage.getItem(STORAGE_KEY_AVISOS);
+        avisos = storedAvisos ? JSON.parse(storedAvisos) : defaultAvisos;
+        if (!storedAvisos) {
+          localStorage.setItem(STORAGE_KEY_AVISOS, JSON.stringify(avisos));
+        }
+      } catch (e) {
+        avisos = defaultAvisos;
+      }
+
+      try {
+        const storedHorarios = localStorage.getItem(STORAGE_KEY_HORARIOS);
+        horarios = storedHorarios ? JSON.parse(storedHorarios) : defaultHorarios;
+        if (!storedHorarios) {
+          localStorage.setItem(STORAGE_KEY_HORARIOS, JSON.stringify(horarios));
+        }
+      } catch (e) {
+        horarios = defaultHorarios;
+      }
+    }
+
+    function formatarDataHora(isoString) {
+      const data = new Date(isoString);
+      return data.toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+    }
+
+    // Renderização dos Avisos (Mais recentes primeiro)
+    function renderAvisos() {
+      const container = document.getElementById('lista-avisos');
+      const emptyState = document.getElementById('empty-state-avisos');
+      const contador = document.getElementById('contador-avisos');
+      
+      if (!container) return;
+
+      contador.textContent = avisos.length;
+
+      if (avisos.length === 0) {
+        container.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      emptyState.classList.remove('flex');
+
+      // Ordenação decrescente: data mais nova primeiro
+      const avisosOrdenados = [...avisos].sort((a, b) => new Date(b.dataIso) - new Date(a.dataIso));
+
+      container.innerHTML = avisosOrdenados.map(aviso => {
+        const isUrgente = aviso.prioridade === 'URGENTE';
+        const tagPrioridade = isUrgente 
+          ? `<span class="px-2 py-0.5 rounded text-on-error bg-error font-label-sm text-label-sm font-semibold flex items-center gap-1">
+               <span class="material-symbols-outlined text-[14px]">warning</span> URGENTE
+             </span>`
+          : `<span class="px-2 py-0.5 rounded text-on-secondary-fixed bg-secondary-fixed/50 font-label-sm text-label-sm font-semibold flex items-center gap-1">
+               <span class="material-symbols-outlined text-[14px]">notifications</span> INFORMATIVO
+             </span>`;
+
+        return `
+          <div class="relative bg-surface-container-lowest rounded-xl p-space-md shadow-md space-y-space-xs transition-all" data-id="${aviso.id}">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                ${tagPrioridade}
+                <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">${formatarDataHora(aviso.dataIso)}</span>
+              </div>
+              <button type="button" class="btn-excluir-aviso p-1 rounded-full text-on-surface-variant hover:text-error hover:bg-error-container/20 transition-colors" data-id="${aviso.id}" title="Excluir Aviso">
+                <span class="material-symbols-outlined text-[20px]">delete</span>
+              </button>
+            </div>
+            
+            <p class="font-body-md text-body-md text-on-surface pt-1 leading-relaxed">
+              ${aviso.mensagem}
+            </p>
+
+            <div class="pt-2 flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+              <span class="material-symbols-outlined text-secondary text-[16px]">badge</span>
+              <span>Por: ${aviso.autor}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Listener para exclusão
+      container.querySelectorAll('.btn-excluir-aviso').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = e.currentTarget.getAttribute('data-id');
+          excluirAviso(id);
+        });
+      });
+    }
+
+    function excluirAviso(id) {
+      avisos = avisos.filter(a => a.id !== id);
+      try {
+        localStorage.setItem(STORAGE_KEY_AVISOS, JSON.stringify(avisos));
+      } catch (e) {
+        console.error(e);
+      }
+      renderAvisos();
+    }
+
+    // Renderização dos Horários
+    function renderHorarios() {
+      const container = document.getElementById('lista-viagens');
+      if (!container) return;
+
+      container.innerHTML = horarios.map((viagem, index) => {
+        return `
+          <div class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm shadow-sm" data-trip-index="${index}">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-space-xs">
+                <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                <span class="font-label-lg text-label-lg text-on-surface font-semibold">${viagem.nome}</span>
+              </div>
+              <span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">${viagem.veiculo}</span>
+            </div>
+
+            <!-- Campos Editáveis -->
+            <div class="grid grid-cols-1 gap-space-sm pt-space-xs">
+              <!-- Origem -->
+              <div class="space-y-1">
+                <label class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                  <span class="material-symbols-outlined text-secondary text-[14px]">trip_origin</span>
+                  Ponto de Partida
+                </label>
+                <input type="text" data-field="origem" value="${viagem.origem}" class="w-full rounded-lg bg-surface-container-lowest px-3 py-2 font-body-md text-body-md text-on-surface outline-none focus:shadow-[0_0_0_2px_#745b00]">
+              </div>
+
+              <!-- Horários Grid -->
+              <div class="grid grid-cols-2 gap-space-sm">
+                <div class="space-y-1">
+                  <label class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                    <span class="material-symbols-outlined text-primary text-[14px]">departure_board</span>
+                    Hora Saída
+                  </label>
+                  <input type="time" data-field="saida" value="${viagem.saida}" class="w-full rounded-lg bg-surface-container-lowest px-3 py-2 font-label-md text-label-md text-on-surface outline-none focus:shadow-[0_0_0_2px_#740010]">
+                </div>
+
+                <div class="space-y-1">
+                  <label class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">schedule</span>
+                    Prev. Chegada
+                  </label>
+                  <input type="time" data-field="chegada" value="${viagem.chegada}" class="w-full rounded-lg bg-surface-container-lowest px-3 py-2 font-label-md text-label-md text-on-surface outline-none focus:shadow-[0_0_0_2px_#740010]">
+                </div>
+              </div>
+
+              <!-- Destino -->
+              <div class="space-y-1">
+                <label class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                  <span class="material-symbols-outlined text-primary text-[14px]">location_on</span>
+                  Ponto de Destino
+                </label>
+                <input type="text" data-field="destino" value="${viagem.destino}" class="w-full rounded-lg bg-surface-container-lowest px-3 py-2 font-body-md text-body-md text-on-surface outline-none focus:shadow-[0_0_0_2px_#745b00]">
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Handlers
+    function setupEventListeners() {
+      // Seletor de Prioridade
+      const priorityBtns = document.querySelectorAll('#prioridade-selector .priority-btn');
+      priorityBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          priorityBtns.forEach(b => {
+            b.classList.remove('bg-secondary-fixed/40', 'text-on-secondary-fixed', 'shadow-sm', 'bg-error', 'text-on-error');
+            b.classList.add('bg-surface-container', 'text-on-surface-variant');
+          });
+
+          prioridadeSelecionada = btn.getAttribute('data-priority');
+          if (prioridadeSelecionada === 'URGENTE') {
+            btn.classList.add('bg-error', 'text-on-error', 'shadow-sm');
+            btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+          } else {
+            btn.classList.add('bg-secondary-fixed/40', 'text-on-secondary-fixed', 'shadow-sm');
+            btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+          }
+        });
+      });
+
+      // Submit do Formulário de Aviso
+      const formAviso = document.getElementById('form-novo-aviso');
+      const txtMensagem = document.getElementById('aviso-mensagem');
+      const errAviso = document.getElementById('aviso-error');
+      const msgSucesso = document.getElementById('aviso-sucesso');
+
+      formAviso.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const texto = txtMensagem.value.trim();
+
+        if (!texto) {
+          errAviso.classList.remove('hidden');
+          txtMensagem.focus();
+          return;
+        }
+
+        errAviso.classList.add('hidden');
+
+        const novoAviso = {
+          id: 'aviso-' + Date.now(),
+          autor: document.getElementById('aviso-autor').value || 'Coordenação de Logística M&J',
+          mensagem: texto,
+          prioridade: prioridadeSelecionada,
+          dataIso: new Date().toISOString()
+        };
+
+        avisos.unshift(novoAviso);
+        try {
+          localStorage.setItem(STORAGE_KEY_AVISOS, JSON.stringify(avisos));
+        } catch (err) {
+          console.error(err);
+        }
+
+        renderAvisos();
+        txtMensagem.value = '';
+
+        // Feedback
+        msgSucesso.classList.remove('hidden');
+        setTimeout(() => {
+          msgSucesso.classList.add('hidden');
+        }, 3500);
+      });
+
+      // Limpar todos os avisos
+      document.getElementById('btn-limpar-todos-avisos').addEventListener('click', () => {
+        if (avisos.length === 0) return;
+        avisos = [];
+        try {
+          localStorage.setItem(STORAGE_KEY_AVISOS, JSON.stringify(avisos));
+        } catch (err) {
+          console.error(err);
+        }
+        renderAvisos();
+      });
+
+      // Salvar Horários
+      const btnSalvarHorarios = document.getElementById('btn-salvar-horarios');
+      const msgSucessoHorarios = document.getElementById('horarios-sucesso');
+
+      btnSalvarHorarios.addEventListener('click', () => {
+        const containers = document.querySelectorAll('#lista-viagens > div');
+        containers.forEach(item => {
+          const index = parseInt(item.getAttribute('data-trip-index'), 10);
+          if (horarios[index]) {
+            const origemInput = item.querySelector('input[data-field="origem"]');
+            const saidaInput = item.querySelector('input[data-field="saida"]');
+            const chegadaInput = item.querySelector('input[data-field="chegada"]');
+            const destinoInput = item.querySelector('input[data-field="destino"]');
+
+            if (origemInput) horarios[index].origem = origemInput.value.trim();
+            if (saidaInput) horarios[index].saida = saidaInput.value;
+            if (chegadaInput) horarios[index].chegada = chegadaInput.value;
+            if (destinoInput) horarios[index].destino = destinoInput.value.trim();
+          }
+        });
+
+        try {
+          localStorage.setItem(STORAGE_KEY_HORARIOS, JSON.stringify(horarios));
+        } catch (err) {
+          console.error(err);
+        }
+
+        msgSucessoHorarios.classList.remove('hidden');
+        setTimeout(() => {
+          msgSucessoHorarios.classList.add('hidden');
+        }, 3500);
+      });
+
+      // Restaurar Horários Padrão
+      document.getElementById('btn-reset-horarios').addEventListener('click', () => {
+        horarios = JSON.parse(JSON.stringify(defaultHorarios));
+        try {
+          localStorage.setItem(STORAGE_KEY_HORARIOS, JSON.stringify(horarios));
+        } catch (err) {
+          console.error(err);
+        }
+        renderHorarios();
+      });
+    }
+
+    // Inicialização
+    initStorage();
+    renderAvisos();
+    renderHorarios();
+    setupEventListeners();
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-gutter"><a class="flex flex-col items-center justify-center gap-space-xs w-14 h-14 text-on-surface-variant hover:text-primary transition-all" data-path="dashboard-aluno" href="#"><span class="material-symbols-outlined text-[22px]">directions_bus</span><span class="font-label-sm text-label-sm">Rotas</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-14 h-14 text-on-surface-variant hover:text-primary transition-all" data-path="carteira-digital" href="#"><span class="material-symbols-outlined text-[22px]">badge</span><span class="font-label-sm text-label-sm">Passe</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-14 h-14 text-on-surface-variant hover:text-primary transition-all" data-path="grade-horarios" href="#"><span class="material-symbols-outlined text-[22px]">calendar_clock</span><span class="font-label-sm text-label-sm">Horários</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs w-14 h-14 transition-all text-primary font-bold" data-path="comunicados-avisos" href="#"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="font-label-sm text-label-sm">Avisos</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-14 h-14 text-on-surface-variant hover:text-primary transition-all" data-path="perfil-usuario" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-label-sm text-label-sm">Perfil</span></a></div></nav></body></html>
